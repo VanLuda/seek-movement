@@ -3,8 +3,7 @@ main = "src/index.js"
 compatibility_date = "2025-01-01"
 
 [vars]
-# Switch back to https://seekmovement.org at DNS cutover, then run: npx wrangler deploy
-SITE_URL = "https://vanluda.github.io/seek-movement"
+SITE_URL = "https://seekmovement.org"
 # Comma-separated list of origins allowed to call this worker
 ALLOWED_ORIGINS = "https://seekmovement.org,https://www.seekmovement.org,https://vanluda.github.io,http://localhost:8080"
 REGISTRATION_NAME = "The Well – Mar 6-8, 2026"
