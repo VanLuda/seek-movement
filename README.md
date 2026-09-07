@@ -42,7 +42,9 @@ npm run dev        # http://localhost:8080
    `CUSTOM_DOMAIN` = `seekmovement.org`. Re-run the workflow.
 3. In the repo: Settings → Pages → Custom domain → `seekmovement.org` → Save, then tick
    "Enforce HTTPS" once the certificate is issued.
-4. At the DNS host (Porkbun), replace the current A record for `seekmovement.org` with
+4. In `worker/wrangler.toml` set `SITE_URL` back to `https://seekmovement.org`, then run
+   `cd worker && npx wrangler deploy` so Stripe returns people to the real domain.
+5. At the DNS host (Porkbun), replace the current A record for `seekmovement.org` with
    GitHub's four A records and add `www` as a CNAME to `vanluda.github.io`:
 
    ```
