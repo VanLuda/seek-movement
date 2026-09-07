@@ -32,8 +32,8 @@ npm run dev        # http://localhost:8080
   Without it, the buttons fall back to `payments.registrationPaymentLink` /
   `payments.donatePaymentLink` (Stripe Payment Links) if set, otherwise they show a
   "not available yet" message.
-- **Survey and waiver forms** post JSON to `forms.endpoint` (a [Formspree](https://formspree.io)
-  form URL works out of the box). Leave empty to disable.
+- **Survey and waiver forms** post JSON to `forms.endpoint`. Not connected yet; follow
+  [docs/connect-forms.md](docs/connect-forms.md) when ready (about 10 minutes).
 
 ## Going live on seekmovement.org
 
