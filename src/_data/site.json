@@ -18,7 +18,7 @@
     "endTime": "Ends Sunday: 3:00 PM"
   },
   "payments": {
-    "checkoutEndpoint": "",
+    "checkoutEndpoint": "https://seek-movement-checkout.seekmovement.workers.dev",
     "donatePaymentLink": "",
     "registrationPaymentLink": ""
   },
