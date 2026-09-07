@@ -1,0 +1,68 @@
+---
+title: Survey
+layout: layouts/base.njk
+permalink: /survey/
+noindex: true
+description: "Tell us about your experience at The Well."
+---
+<section class="section">
+  <div class="container">
+    <form class="form-card" data-form="survey" data-subject="Retreat survey" data-success="Thank you for sharing your experience with us!" novalidate>
+      <h2>Survey</h2>
+      <p class="form-intro">Please take a moment to tell us about your experience.</p>
+      <input type="hidden" name="role" value="Participant">
+
+      <div class="form-section">
+        <h3>How satisfied are you with:</h3>
+        <div class="likert" role="group" aria-label="Satisfaction">
+          <div></div>
+          {% set satisfaction = ["Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"] %}
+          {% for o in satisfaction %}<div class="head" aria-hidden="true">{{ o }}</div>{% endfor %}
+          {% for item in [["teaching", "Teaching"], ["experience", "Experience"], ["worship", "Worship"]] %}
+          <div class="likert-row" role="radiogroup" aria-label="{{ item[1] }}">
+            <div class="row-label">{{ item[1] }} <span class="req">*</span></div>
+            {% for o in satisfaction %}
+            <label class="opt"><input type="radio" name="{{ item[0] }}" value="{{ o }}" required><span>{{ o }}</span></label>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>How likely are you to:</h3>
+        <div class="likert" role="group" aria-label="Likelihood">
+          <div></div>
+          {% set likelihood = ["Extremely Unlikely", "Unlikely", "Neutral", "Likely", "Extremely Likely"] %}
+          {% for o in likelihood %}<div class="head" aria-hidden="true">{{ o }}</div>{% endfor %}
+          {% for item in [["join_again", "Join us again"], ["recommend", "Recommend us to friends/family"]] %}
+          <div class="likert-row" role="radiogroup" aria-label="{{ item[1] }}">
+            <div class="row-label">{{ item[1] }} <span class="req">*</span></div>
+            {% for o in likelihood %}
+            <label class="opt"><input type="radio" name="{{ item[0] }}" value="{{ o }}" required><span>{{ o }}</span></label>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="field">
+          <label for="loved">What did you love?</label>
+          <textarea id="loved" name="loved" rows="5"></textarea>
+        </div>
+        <div class="field">
+          <label for="differently">What could be done differently?</label>
+          <textarea id="differently" name="differently" rows="5"></textarea>
+        </div>
+      </div>
+
+      <div class="honeypot" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </div>
+      <div class="form-status" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

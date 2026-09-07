@@ -1,0 +1,15 @@
+name = "seek-movement-checkout"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+SITE_URL = "https://seekmovement.org"
+# Comma-separated list of origins allowed to call this worker
+ALLOWED_ORIGINS = "https://seekmovement.org,https://www.seekmovement.org,https://vanluda.github.io,http://localhost:8080"
+REGISTRATION_NAME = "The Well – Mar 6-8, 2026"
+REGISTRATION_AMOUNT_CENTS = "36700"
+DONATION_NAME = "Donation to The Seek Movement"
+# Optional: use a Stripe Price instead of the amount above
+# REGISTRATION_PRICE_ID = "price_..."
+
+# Secret (never commit): npx wrangler secret put STRIPE_SECRET_KEY

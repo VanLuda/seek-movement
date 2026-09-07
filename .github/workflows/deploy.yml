@@ -1,0 +1,57 @@
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/configure-pages@v5
+      - name: Build
+        env:
+          # Set the repo variable CUSTOM_DOMAIN=seekmovement.org (Settings > Secrets and variables > Actions > Variables)
+          # once DNS points at GitHub. Until then the site is served from https://<user>.github.io/<repo>/.
+          CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+        run: |
+          if [ -n "$CUSTOM_DOMAIN" ]; then
+            export PATH_PREFIX="/"
+          else
+            export PATH_PREFIX="/${GITHUB_REPOSITORY#*/}/"
+          fi
+          echo "PATH_PREFIX=$PATH_PREFIX"
+          npm run build
+          if [ -n "$CUSTOM_DOMAIN" ]; then
+            echo "$CUSTOM_DOMAIN" > _site/CNAME
+          fi
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

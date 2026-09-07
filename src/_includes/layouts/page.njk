@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+{% if heroImage %}
+<section class="page-hero" style="--hero-image: url('{{ heroImage | url }}')">
+  <div class="container"><h1>{{ heroTitle or title }}</h1></div>
+</section>
+{% else %}
+<section class="page-title"><div class="container"><h1>{{ title }}</h1></div></section>
+{% endif %}
+<section class="section section--page">
+  <div class="container prose{% if narrow %} prose--narrow{% endif %}">
+    {{ content | safe }}
+  </div>
+</section>

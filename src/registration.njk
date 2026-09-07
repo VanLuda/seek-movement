@@ -1,0 +1,216 @@
+---
+title: Registration
+layout: layouts/base.njk
+permalink: /registration/
+description: "Register for The Well, a three-day Christ-centered retreat for women in North Fort Myers, Florida."
+---
+<section class="section">
+  <div class="container">
+    <div class="form-card">
+      <h1>{{ site.event.name }}</h1>
+      <p class="event-meta">{{ site.event.dates }} | Fort Myers, FL</p>
+
+      <div class="prose">
+        <h4>Price</h4>
+        <p>${{ site.event.price }}</p>
+        <p><strong>Registration closes on {{ site.event.registrationCloses }}.</strong></p>
+        <h4>Location</h4>
+        <p>{{ site.event.venue }}<br>{{ site.event.location }}</p>
+        <h4>Times &amp; Dates</h4>
+        <p>{{ site.event.dates }}</p>
+        <p>{{ site.event.startTime }}</p>
+        <p>{{ site.event.endTime }}</p>
+        <p>The Well is a sleep away immersive retreat experience created for women who are longing for rest, clarity, and renewal.</p>
+        <p>Inspired by the story of the woman at the well, this weekend invites each woman to place herself in that moment—meeting Jesus not through striving, but through presence.</p>
+        <p>The Well is not about doing more.<br>It is about laying things down.</p>
+        <p><em>“Come to Me, all you who are weary and burdened, and I will give you rest.”</em><br>Matthew 11:28</p>
+        <p>Throughout the retreat, women move through a shared journey that includes unhurried worship and prayer, Christ-centered teaching, time for rest and reflection, creative expression, moments outdoors, and meaningful connection with other women.</p>
+        <p>Some moments are shared. Some are personal.<br>Some are quiet. Some are joyful.<br>All are intentional.</p>
+
+        <div class="acc acc--plain">
+          <details>
+            <summary>What women will experience</summary>
+            <div class="acc-body">
+              <p>The Well is held within a thoughtful structure designed to create peace, safety, and spiritual grounding.</p>
+              <p>Women often arrive feeling tired, guarded, or unsure what they need.<br>They leave lighter.</p>
+              <p>At The Well, women experience space to:</p>
+              <ul>
+                <li>Encounter God in a personal and unforced way</li>
+                <li>Release burdens or expectations they were never meant to carry</li>
+                <li>Remember their identity as daughters of God</li>
+                <li>Receive clarity, peace, and renewed vision</li>
+                <li>Form genuine connections that extend beyond the weekend</li>
+              </ul>
+              <p>Nothing is rushed. Participation is always invited, never required.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Who The Well is for</summary>
+            <div class="acc-body">
+              <p>The Well is for women in many seasons of life—whether you are seeking rest, longing for deeper connection with God, rediscovering faith, or simply needing space to be still.</p>
+              <p>You do not need the right words.<br>You do not need a polished faith story.<br>You do not need to know exactly what you are coming for.</p>
+              <p>Just a willingness to come.</p>
+            </div>
+          </details>
+          <details>
+            <summary>An Invitation</summary>
+            <div class="acc-body">
+              <p>The Well is an invitation to step out of the noise and return to the Source.</p>
+              <p>To sit.<br>To listen.<br>To be reminded that you are seen, known, and deeply loved.</p>
+              <p>You do not have to carry everything alone anymore.</p>
+              <p>Come join us at the Well.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Questions?</summary>
+            <div class="acc-body">
+              <p>Holly VanderLaan<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <form id="registration-form" data-contact="{{ site.email }}" novalidate>
+        <input type="hidden" name="event" value="{{ site.event.name }} – {{ site.event.dates }}">
+
+        <div class="form-section">
+          <h3>Your details</h3>
+          <div class="field">
+            <label for="email">Email address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input type="text" id="first_name" name="first_name" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="last_name">Last name <span class="req">*</span></label>
+              <input type="text" id="last_name" name="last_name" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="address">Street address <span class="req">*</span></label>
+            <input type="text" id="address" name="address" autocomplete="street-address" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="city">Town / City <span class="req">*</span></label>
+              <input type="text" id="city" name="city" autocomplete="address-level2" required>
+            </div>
+            <div class="field">
+              <label for="state">State <span class="req">*</span></label>
+              <input type="text" id="state" name="state" autocomplete="address-level1" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="zip">ZIP Code <span class="req">*</span></label>
+              <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" required>
+            </div>
+            <div class="field">
+              <label for="country">Country / Region <span class="req">*</span></label>
+              <input type="text" id="country" name="country" autocomplete="country-name" value="United States" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Dietary &amp; Food Preferences</h3>
+          <div class="field">
+            <label for="diet_allergies">What food allergies should we be aware of? <span class="req">*</span></label>
+            <textarea id="diet_allergies" name="diet_allergies" rows="2" required></textarea>
+            <p class="hint">We do our best to accommodate common dietary needs (vegetarian, gluten-free). Due to the nature of group meal preparation, we may not be able to accommodate all dietary preferences. If you have a severe or life-threatening food allergy, please let us know in advance. If none, write “None”.</p>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Emergency Contact</h3>
+          <div class="field-row">
+            <div class="field">
+              <label for="emergency_name">Name <span class="req">*</span></label>
+              <input type="text" id="emergency_name" name="emergency_name" required>
+            </div>
+            <div class="field">
+              <label for="emergency_phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="emergency_phone" name="emergency_phone" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="emergency_relationship">Relationship <span class="req">*</span></label>
+            <input type="text" id="emergency_relationship" name="emergency_relationship" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Medical</h3>
+          <div class="field">
+            <label for="medical_conditions">What medical conditions should we be aware of that could affect your participation or safety? <span class="req">*</span></label>
+            <input type="text" id="medical_conditions" name="medical_conditions" required>
+          </div>
+          <div class="field">
+            <label for="medical_medications">What medications are you taking that could affect your participation or require special consideration (e.g., heat sensitivity, dizziness)? <span class="req">*</span></label>
+            <input type="text" id="medical_medications" name="medical_medications" required>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Questions</h3>
+          <div class="field">
+            <label for="question_pattern">Is there a thought, feeling, or habit you’ve noticed lately that you’d like to see change or grow? <span class="req">*</span></label>
+            <textarea id="question_pattern" name="question_pattern" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label for="question_future">When you think about your future, what is something you’re hoping for or praying into? <span class="req">*</span></label>
+            <textarea id="question_future" name="question_future" rows="3" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Policies &amp; Permissions</h3>
+          <div class="field">
+            <label class="choice"><input type="checkbox" name="legal_medical" value="yes" required><span><strong>Emergency Medical Consent:</strong> In the event of a medical emergency, I authorize retreat staff to seek medical treatment on my behalf and to share necessary information with emergency responders. <span class="req">*</span></span></label>
+          </div>
+          <div class="field">
+            <p class="label">Photo/Video Consent <span class="req">*</span></p>
+            <label class="choice"><input type="radio" name="legal_media" value="Yes: I’m okay being included in photos and videos" required><span>Yes: I’m okay being included in photos and videos</span></label>
+            <label class="choice"><input type="radio" name="legal_media" value="Group only: I’m okay with wide/group shots, but please avoid close-ups of me"><span>Group only: I’m okay with wide/group shots, but please avoid close-ups of me</span></label>
+            <label class="choice"><input type="radio" name="legal_media" value="No: please do not photograph or record me (I understand I may appear incidentally in background/wide shots)"><span>No: please do not photograph or record me (I understand I may appear incidentally in background/wide shots)</span></label>
+          </div>
+        </div>
+
+        <div class="form-section order-summary">
+          <h3>Your order</h3>
+          <table>
+            <thead><tr><th>Product</th><th>Subtotal</th></tr></thead>
+            <tbody>
+              <tr><td>{{ site.event.name }} × 1</td><td>${{ site.event.price }}.00</td></tr>
+              <tr class="total"><td>Total</td><td>${{ site.event.price }}.00</td></tr>
+            </tbody>
+          </table>
+          <p class="hint">Payment is processed securely by Stripe on the next screen. Have a coupon? You can enter it there.</p>
+        </div>
+
+        <div class="form-section">
+          <h3>Terms &amp; Conditions</h3>
+          <div class="field">
+            <label class="choice"><input type="checkbox" name="terms" value="yes" required><span>I have read and agree to the website <a href="{{ '/terms/' | url }}" target="_blank" rel="noopener">terms and conditions</a> <span class="req">*</span></span></label>
+            <label class="choice"><input type="checkbox" name="liability_waiver" value="yes" required><span>I have read, understand, and voluntarily agree to the <a href="{{ '/waiver-release-of-liability/' | url }}" target="_blank" rel="noopener">Waiver &amp; Release of Liability</a>, and I understand that I am giving up certain legal rights, including the right to sue for ordinary negligence. <span class="req">*</span></span></label>
+          </div>
+          <p class="hint">Your personal data will be used to process your registration and support your experience at the retreat, as described in our <a href="{{ '/privacy-policy/' | url }}">privacy policy</a>.</p>
+        </div>
+
+        <div class="honeypot" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg">Continue to payment</button>
+        </div>
+        <div class="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>

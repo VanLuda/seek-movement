@@ -1,0 +1,77 @@
+---
+title: Waiver and Release of Liability
+layout: layouts/base.njk
+permalink: /release/
+noindex: true
+description: "Sign the Waiver and Release of Liability for The Well retreat."
+---
+<section class="section">
+  <div class="container">
+    <form class="form-card" data-form="release" data-subject="Waiver &amp; Release of Liability" data-success="Thank you. Your waiver has been received." novalidate>
+      <h2>Waiver and Release of Liability</h2>
+
+      <div class="form-section">
+        <h3>Release of Liability</h3>
+        <div class="field-row">
+          <div class="field">
+            <label for="first_name">First name <span class="req">*</span></label>
+            <input type="text" id="first_name" name="first_name" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="last_name">Last name <span class="req">*</span></label>
+            <input type="text" id="last_name" name="last_name" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Emergency Contact</h3>
+        <div class="field-row">
+          <div class="field">
+            <label for="emergency_name">Name <span class="req">*</span></label>
+            <input type="text" id="emergency_name" name="emergency_name" required>
+          </div>
+          <div class="field">
+            <label for="emergency_phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="emergency_phone" name="emergency_phone" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="emergency_relationship">Relationship <span class="req">*</span></label>
+          <input type="text" id="emergency_relationship" name="emergency_relationship" required>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Policies &amp; Permissions</h3>
+        <div class="field">
+          <p class="label">Medical Consent <span class="req">*</span></p>
+          <label class="choice"><input type="checkbox" name="legal_medical" value="yes" required><span><strong>Emergency Medical Consent:</strong> In the event of a medical emergency, I authorize retreat staff to seek medical treatment on my behalf and to share necessary information with emergency responders.</span></label>
+        </div>
+        <div class="field">
+          <p class="label">Photo/Video Consent <span class="req">*</span></p>
+          <label class="choice"><input type="checkbox" name="legal_media" value="yes" required><span><strong>Photo/Video Consent:</strong> I agree that I’m okay being included in photos and videos</span></label>
+        </div>
+        <div class="field">
+          <p class="label">Terms and Conditions <span class="req">*</span></p>
+          <label class="choice"><input type="checkbox" name="terms" value="yes" required><span>I have read and agree to the website <a href="{{ '/terms/' | url }}" target="_blank" rel="noopener">terms and conditions</a></span></label>
+        </div>
+        <div class="field">
+          <p class="label">Waiver &amp; Release of Liability <span class="req">*</span></p>
+          <label class="choice"><input type="checkbox" name="liability_waiver" value="yes" required><span>I have read, understand, and voluntarily agree to the <a href="{{ '/waiver-release-of-liability/' | url }}" target="_blank" rel="noopener">Waiver &amp; Release of Liability</a>, and I understand that I am giving up certain legal rights, including the right to sue for ordinary negligence.</span></label>
+        </div>
+      </div>
+
+      <div class="honeypot" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </div>
+      <div class="form-status" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+{
+  "name": "The Seek Movement",
+  "tagline": "Pursuing His Presence. Discovering Your Purpose",
+  "url": "https://seekmovement.org",
+  "description": "The Seek Movement creates Christ-centered sanctuaries where women can rest, heal, and realign their lives by learning to seek first the Kingdom of God.",
+  "email": "holly@seekmovement.org",
+  "ein": "41-2900291",
+  "event": {
+    "name": "The Well",
+    "dates": "Mar 6-8, 2026",
+    "datesLong": "March 6th–8th, 2026",
+    "location": "North Fort Myers, FL",
+    "venue": "Whispering Pines Ranch",
+    "price": 367,
+    "priceCents": 36700,
+    "registrationCloses": "February 27th, 2026",
+    "startTime": "Beginning Friday: 9:00 AM",
+    "endTime": "Ends Sunday: 3:00 PM"
+  },
+  "payments": {
+    "checkoutEndpoint": "",
+    "donatePaymentLink": "",
+    "registrationPaymentLink": ""
+  },
+  "forms": {
+    "endpoint": ""
+  }
+}

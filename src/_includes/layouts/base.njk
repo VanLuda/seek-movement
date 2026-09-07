@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }} | {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }} | {{ site.tagline }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/img/favicon.png' | url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  <script>
+    window.SEEK_CONFIG = {
+      payments: {{ site.payments | dump | safe }},
+      forms: {{ site.forms | dump | safe }},
+      pathPrefix: "{{ '/' | url }}"
+    };
+  </script>
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="{{ '/assets/js/main.js' | url }}" defer></script>
+</body>
+</html>

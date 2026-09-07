@@ -1,0 +1,71 @@
+---
+title: Donate
+layout: layouts/base.njk
+permalink: /donate/
+description: "Support The Seek Movement. Your gift keeps retreats accessible and helps build Christ-centered sanctuaries where women can encounter God."
+---
+<section class="page-hero" style="--hero-image: url('{{ '/assets/img/donate-hero.jpg' | url }}')">
+  <div class="container"><h1>Donate</h1></div>
+</section>
+<section class="section">
+  <div class="container donate-grid">
+    <div class="donate-content prose">
+      <h4>Why Give?</h4>
+      <p>Giving to The Seek Movement is an investment in transformation.</p>
+      <p>It helps keep retreats accessible for women who may need financial support and covers essential costs like materials, meals, worship, safety, and logistics.</p>
+      <p>Your support helps create Christ-centered retreat experiences rooted in Scripture and prayer. It provides space for rest, reflection, creativity, and renewal. Most importantly, it sustains the long-term vision of building sanctuaries where women can encounter God.</p>
+      <p>Each gift, large or small, plays a role in creating an environment where hearts can soften, burdens can be laid down, and lives can be gently realigned with what matters most.</p>
+
+      <h4>How Your Gift Is Used</h4>
+      <p>Donations directly support the mission and experiences of The Seek Movement, including:</p>
+      <ul>
+        <li>Scholarships that help remove financial barriers</li>
+        <li>Worship and teaching resources</li>
+        <li>Retreat supplies and creative materials</li>
+        <li>Meals, hospitality, and shared gathering spaces</li>
+        <li>Outdoor environments and experience-based activities that support stillness, courage, trust, and personal growth</li>
+        <li>Future hospitality accommodations to support multi-day retreats and overnight stays</li>
+      </ul>
+      <p>We are committed to stewarding every gift with integrity, care, and transparency. Any long-term facilities or accommodations are approached prayerfully and only as they align with the original mission and vision of The Seek Movement.</p>
+      <p>If you have questions about how gifts are stewarded or would like to discuss a specific area of support, we welcome you to <a href="mailto:{{ site.email }}">reach out</a>.</p>
+
+      <h4>The Ripple Effect</h4>
+      <p>When a woman encounters God, the impact does not stop with her.</p>
+      <p>What begins in stillness is often carried back into everyday life.<br>Clarity settles into conversations.<br>Peace influences relationships.<br>Healing shapes how a woman shows up in her home, her work, and her community.</p>
+      <p>This is where the ripple begins.</p>
+      <p>The Seek Movement creates space for experiences designed to carry forward beyond a gathering and beyond a single weekend. These moments are intended to extend into families and, over time, shape future generations.</p>
+      <p>Your generosity helps make this kind of space possible.</p>
+
+      <h4>A Growing Vision</h4>
+      <p>While the ripple speaks to impact, our vision speaks to stewardship.</p>
+      <p>The Seek Movement is in its beginning season.</p>
+      <p>The Well is the first expression of a larger calling to create Christ-centered sanctuaries where women can step away from the noise of everyday life and encounter God through rest, healing, and renewal.</p>
+      <p>Our long-term vision is to establish permanent retreat spaces and extend these sanctuaries to additional locations over time, making space for women across the country to experience spiritual formation, <em>only as this work remains firmly rooted in its original mission and vision</em>.</p>
+      <p>Each gift helps lay the foundation for what is being built, trusting God to guide the growth and fruit of this work.</p>
+
+      <h4>Giving With Purpose</h4>
+      <p>Some women come carrying more than they realize.<br>Some are walking through heavy seasons.<br>Some are simply longing for quiet and clarity.</p>
+      <p>Your generosity helps ensure that cost is not the reason a woman misses the invitation.</p>
+      <p>Giving is not about obligation.<br>It is about partnership.</p>
+
+      <h4>An Invitation to Partner</h4>
+      <p>If you feel led to support The Seek Movement, we invite you to give in whatever way feels right.</p>
+      <p>Whether you give once or choose to partner through ongoing support, your generosity helps create spaces where women can encounter God, rediscover their identity, and leave renewed.</p>
+      <p><strong>Thank you for partnering with us as we prayerfully follow God’s leading through The Seek Movement.</strong></p>
+      <p><strong>Tax Information:</strong> The Seek Movement is a 501(c)(3) non-profit organization and contributions are tax-deductible to the extent permitted by law. The Seek Movement tax identification number is {{ site.ein }}.</p>
+    </div>
+
+    <aside class="donate-card">
+      <h3>Support the Mission</h3>
+      <p>Your support makes these retreats possible.</p>
+      <form id="donate-form" novalidate>
+        <label class="amount-field">
+          <span aria-hidden="true">$</span>
+          <input type="text" inputmode="decimal" name="amount" placeholder="250.00" aria-label="Donation amount in US dollars" autocomplete="off">
+        </label>
+        <button type="submit" class="btn btn-donate">Donate</button>
+        <div class="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+    </aside>
+  </div>
+</section>

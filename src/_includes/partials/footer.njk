@@ -1,0 +1,16 @@
+<footer class="site-footer" id="footer">
+  <div class="container footer-inner">
+    <a class="footer-logo" href="{{ '/' | url }}" aria-label="The Seek Movement – home">{% include "partials/logo.njk" %}</a>
+    <nav class="footer-nav" aria-label="Legal">
+      <ul>
+        <li><a href="{{ '/terms/' | url }}">Terms</a></li>
+        <li><a href="{{ '/refund-policy/' | url }}">Refund Policy</a></li>
+        <li><a href="{{ '/privacy-policy/' | url }}">Privacy</a></li>
+        <li><a href="{{ '/participant-code-of-conduct/' | url }}">Code of Conduct</a></li>
+        <li><a href="{{ '/waiver-release-of-liability/' | url }}">Liability Waiver</a></li>
+      </ul>
+    </nav>
+    <p>© {{ '' | year }} The Seek Movement, Inc. All rights reserved.</p>
+    <p>The Seek Movement, Inc. is a registered 501(c)(3) nonprofit organization.<br>EIN: {{ site.ein }}. Donations are tax-deductible as allowed by law.</p>
+  </div>
+</footer>

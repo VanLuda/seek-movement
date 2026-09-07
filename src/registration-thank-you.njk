@@ -1,0 +1,18 @@
+---
+title: Registration complete
+layout: layouts/base.njk
+permalink: /registration/thank-you/
+noindex: true
+eleventyExcludeFromCollections: true
+---
+<section class="section">
+  <div class="container">
+    <div class="form-card prose">
+      <h1>You’re registered!</h1>
+      <p>Thank you for signing up for {{ site.event.name }} ({{ site.event.dates }}). A receipt has been emailed to you by Stripe.</p>
+      <p>Before the retreat we’ll email you the exact location and a full packing list. In the meantime, you can review <a href="{{ '/faq/' | url }}">lodging, food, and packing details</a>.</p>
+      <p>Questions? Email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+      <p><a class="btn btn-primary" href="{{ '/' | url }}">Back to home</a></p>
+    </div>
+  </div>
+</section>

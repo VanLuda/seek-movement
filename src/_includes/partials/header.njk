@@ -1,0 +1,24 @@
+<header class="site-header{% if transparentHeader %} is-transparent{% endif %}" id="site-header">
+  <div class="header-inner">
+    <a class="logo" href="{{ '/' | url }}" aria-label="The Seek Movement – home">{% include "partials/logo.njk" %}</a>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="{{ '/about/' | url }}">About</a></li>
+          <li><a href="{{ '/faq/' | url }}">FAQs</a></li>
+          <li><a href="{{ '/donate/' | url }}">Donate</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="{{ '/registration/' | url }}">Sign Up <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+    <ul>
+      <li><a href="{{ '/about/' | url }}">About</a></li>
+      <li><a href="{{ '/faq/' | url }}">FAQs</a></li>
+      <li><a href="{{ '/donate/' | url }}">Donate</a></li>
+      <li><a href="{{ '/registration/' | url }}">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
